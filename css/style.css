@@ -1,0 +1,43 @@
+*{ 
+   margin: 0; 
+   padding: 0; 
+   box-sizing: border-box; 
+} 
+ 
+body{ 
+   font-family: 'Poppins', sans-serif; 
+} 
+ 
+.banner{ 
+   background-image: url('../img/banner.jpg'); 
+   background-size: cover; 
+   background-position: center; 
+   height: 80vh; 
+} 
+ 
+.banner h1{ 
+   font-size: 3rem; 
+   font-weight: bold; 
+} 
+ 
+.card{ 
+   transition: 0.3s; 
+} 
+ 
+.card:hover{ 
+   transform: scale(1.05); 
+} 
+ 
+footer{ 
+   margin-top: 30px; 
+} 
+@media(max-width:768px){ 
+ 
+   .banner h1{ 
+       font-size: 2rem; 
+   } 
+ 
+   .banner{ 
+       height: 60vh; 
+   } 
+} 
