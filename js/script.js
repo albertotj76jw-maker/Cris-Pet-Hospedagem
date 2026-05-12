@@ -1,60 +1,105 @@
-// BOTÃO TOPO
+// DARK MODE
 
-const topBtn = document.getElementById("topBtn");
+const darkBtn =
+document.getElementById("darkModeBtn");
 
-window.addEventListener("scroll", () => {
+if(localStorage.getItem("theme") === "dark"){
 
-if(window.scrollY > 300){
+document.body.classList.add("dark-mode");
 
-topBtn.style.display = "flex";
+}
+
+if(darkBtn){
+
+darkBtn.addEventListener("click", () => {
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+
+localStorage.setItem("theme","dark");
 
 }else{
 
-topBtn.style.display = "none";
+localStorage.setItem("theme","light");
 
 }
 
 });
 
-// SCROLL TO TOP
+}
+
+// BOTÃO TOPO
+
+const topBtn =
+document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+if(topBtn){
+
+topBtn.style.display =
+window.scrollY > 300
+? "flex"
+: "none";
+
+}
+
+});
+
+if(topBtn){
 
 topBtn.addEventListener("click", () => {
 
 window.scrollTo({
+
 top:0,
 behavior:"smooth"
-});
 
 });
 
-// ANIMAÇÃO NAVBAR
+});
 
-const navbar = document.querySelector(".navbar");
+}
+
+// NAVBAR
+
+const navbar =
+document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
 
-navbar.classList.toggle("shadow-lg", window.scrollY > 50);
+if(navbar){
+
+navbar.classList.toggle(
+"shadow-lg",
+window.scrollY > 50
+);
+
+}
 
 });
 
-// ANIMAÇÃO CARDS
+// REVEAL
 
-const revealElements = document.querySelectorAll(
-'.pet-card, .service-box, .stat-box, .gallery-img'
+const reveal =
+document.querySelectorAll(
+'.pet-card,.service-box,.stat-box,.gallery-img'
 );
 
-const revealOnScroll = () => {
+const revealScroll = () => {
 
-const triggerBottom = window.innerHeight * 0.85;
+const trigger =
+window.innerHeight * 0.85;
 
-revealElements.forEach(el => {
+reveal.forEach(el => {
 
-const elementTop = el.getBoundingClientRect().top;
+const top =
+el.getBoundingClientRect().top;
 
-if(elementTop < triggerBottom){
+if(top < trigger){
 
-el.style.opacity = "1";
-el.style.transform = "translateY(0)";
+el.classList.add("active");
 
 }
 
@@ -62,30 +107,91 @@ el.style.transform = "translateY(0)";
 
 };
 
-revealElements.forEach(el => {
+window.addEventListener("scroll", revealScroll);
 
-el.style.opacity = "0";
-el.style.transform = "translateY(40px)";
-el.style.transition = "all 0.8s ease";
-
-});
-
-window.addEventListener("scroll", revealOnScroll);
-
-revealOnScroll();
-
-// FORMULÁRIO
-
-function mensagem(){
-
-alert("Mensagem enviada com sucesso!");
-
-}
+revealScroll();
 
 // LOADER
 
 window.addEventListener("load", () => {
 
-document.body.classList.add("loaded");
+const loader =
+document.getElementById("loader");
+
+if(loader){
+
+setTimeout(() => {
+
+loader.style.opacity = "0";
+
+setTimeout(() => {
+
+loader.style.display = "none";
+
+},600);
+
+},1200);
+
+}
 
 });
+
+// VIACEP
+
+const cepInput =
+document.getElementById("cep");
+
+if(cepInput){
+
+cepInput.addEventListener("blur", async () => {
+
+const cep =
+cepInput.value.replace(/\D/g,'');
+
+if(cep.length !== 8){
+
+alert("CEP inválido");
+
+return;
+
+}
+
+try{
+
+const response =
+await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+
+const dados =
+await response.json();
+
+document.getElementById("cidade").value =
+dados.localidade || "";
+
+}catch{
+
+alert("Erro ao buscar CEP");
+
+}
+
+});
+
+}
+
+// TOAST
+
+const toastEl =
+document.getElementById("liveToast");
+
+if(toastEl){
+
+const toast =
+new bootstrap.Toast(toastEl);
+
+setTimeout(() => {
+
+toast.show();
+
+},2500);
+
+}
+
