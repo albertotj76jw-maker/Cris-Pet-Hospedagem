@@ -5,21 +5,48 @@ USE crispet;
 CREATE TABLE usuarios(
 
 id INT AUTO_INCREMENT PRIMARY KEY,
-email VARCHAR(120),
-senha VARCHAR(120)
+nome VARCHAR(100),
+email VARCHAR(100) UNIQUE,
+senha VARCHAR(255)
 
 );
-
-INSERT INTO usuarios(email,senha)
-VALUES('admin@crispet.com','123456');
 
 CREATE TABLE contatos(
 
 id INT AUTO_INCREMENT PRIMARY KEY,
-nome VARCHAR(120),
-email VARCHAR(120),
-telefone VARCHAR(30),
+nome VARCHAR(100),
+email VARCHAR(100),
+telefone VARCHAR(20),
 assunto VARCHAR(100),
-mensagem TEXT
+mensagem TEXT,
+data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
 );
+
+CREATE TABLE pets(
+
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100),
+raca VARCHAR(100),
+descricao TEXT,
+cidade VARCHAR(100),
+imagem VARCHAR(255),
+status_pet VARCHAR(50),
+data_postagem TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+-- ADMIN
+
+INSERT INTO usuarios
+(nome,email,senha)
+
+VALUES
+
+(
+'Administrador',
+'admin@crispet.com',
+'$2y$10$4lQY3P8RmR6h0hSPQxMZ8O6j7L0mJkXrL4aA0I8zvL8f0N0Xx1h3K'
+);
+
+-- SENHA = 123456

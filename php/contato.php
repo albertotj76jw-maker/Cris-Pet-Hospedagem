@@ -10,13 +10,27 @@ $mensagem = $_POST['mensagem'];
 
 $sql = "INSERT INTO contatos
 (nome,email,telefone,assunto,mensagem)
+VALUES(?,?,?,?,?)";
 
-VALUES
+$stmt = $conn->prepare($sql);
 
-('$nome','$email','$telefone','$assunto','$mensagem')";
+$stmt->bind_param(
+"sssss",
+$nome,
+$email,
+$telefone,
+$assunto,
+$mensagem
+);
 
-mysqli_query($conn,$sql);
+if($stmt->execute()){
 
-header("Location: ../contato.html");
+header("Location: ../contato.html?sucesso=1");
+
+}else{
+
+echo "Erro ao enviar";
+
+}
 
 ?>

@@ -1,28 +1,37 @@
 <?php
 
 session_start();
-
-include("conexao.php");
+include 'conexao.php';
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM usuarios
-WHERE email='$email'
-AND senha='$senha'";
+$sql = "SELECT * FROM usuarios WHERE email=?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $email);
+$stmt->execute();
 
-$result = mysqli_query($conn,$sql);
+$result = $stmt->get_result();
 
-if(mysqli_num_rows($result)>0){
+if($result->num_rows > 0){
 
-$_SESSION['admin']=$email;
+    $usuario = $result->fetch_assoc();
 
-header("Location: ../index.html");
+    if(password_verify($senha, $usuario['senha'])){
+
+        $_SESSION['usuario'] = $usuario['nome'];
+
+        header("Location: ../dashboard.php");
+
+    }else{
+
+        echo "Senha inválida";
+
+    }
 
 }else{
 
-echo "Login inválido";
+    echo "Usuário não encontrado";
 
 }
-
 ?>
