@@ -1,4 +1,4 @@
-:root{
+:root{ 
 --primary:#2563EB;       /* Azul principal */
 --secondary:#EC4899;     /* Rosa principal */
 --dark:#0F172A;          /* Fundo escuro elegante */
@@ -59,6 +59,22 @@ transition:.4s;
 
 .nav-link:hover::after{
 width:100%;
+}
+
+body.dark-mode{
+background:#0F172A;
+color:white;
+}
+
+.dark-mode .card,
+.dark-mode .service-box,
+.dark-mode .pet-card{
+background:#1E293B;
+color:white;
+}
+
+.dark-mode footer{
+background:#020617;
 }
 
 /* HERO */
@@ -266,6 +282,11 @@ border-radius:50%;
 display:none;
 z-index:999;
 box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.btn{
+border-radius:50px;
+font-weight:600;
 }
 
 .btn-primary{
@@ -541,31 +562,15 @@ color:#FFFFFF;
 
 body.dark-mode .gallery,
 body.dark-mode .pets,
-body.dark-mode .gallery,
-body.dark-mode .pets{
+body.dark-mode .container,
+body.dark-mode .py-5{
 background:transparent;
-}
-
-.service-box p,
-.pet-card p,
-.card p{
-color:#475569;
-}
-
-body.dark-mode .service-box p,
-body.dark-mode .pet-card p,
-body.dark-mode .card p{
-color:#E2E8F0;
 }
 
 /* TÍTULOS */
 
-.section-title{
-color:var(--dark);
-}
-
 body.dark-mode .section-title{
-color:#FFFFFF !important;
+color:#FFFFFF;
 }
 
 /* TEXTOS */
@@ -596,13 +601,6 @@ border:1px solid rgba(255,255,255,.08);
 
 /* FAQ */
 
-.accordion-button{
-font-weight:600;
-padding:20px;
-background:white;
-color:#0F172A;
-}
-
 body.dark-mode .accordion-button{
 background:#1E293B;
 color:white;
@@ -619,14 +617,6 @@ color:#E5E7EB;
 }
 
 /* DEPOIMENTOS */
-
-body.dark-mode .bg-light{
-background:#111827 !important;
-}
-
-.bg-light{
-background:#F8FAFC !important;
-}
 
 body.dark-mode .bg-light{
 background:#111827 !important;
@@ -699,12 +689,6 @@ box-shadow:0 10px 30px rgba(0,0,0,.4);
 body.dark-mode .service-box:hover,
 body.dark-mode .pet-card:hover,
 body.dark-mode .card:hover{
-box-shadow:0 20px 40px rgba(236,72,153,.25);
-}
-
-.service-box:hover,
-.pet-card:hover{
-transform:translateY(-10px);
 box-shadow:0 20px 40px rgba(236,72,153,.25);
 }
 
