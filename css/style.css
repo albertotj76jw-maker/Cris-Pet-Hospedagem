@@ -14,12 +14,14 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
 font-family:'Poppins',sans-serif;
-background:var(--light);
 color:var(--dark);
 overflow-x:hidden;
 padding-top:90px;
@@ -63,13 +65,6 @@ width:100%;
 
 body.dark-mode{
 background:#0F172A;
-color:white;
-}
-
-.dark-mode .card,
-.dark-mode .service-box,
-.dark-mode .pet-card{
-background:#1E293B;
 color:white;
 }
 
@@ -180,7 +175,7 @@ font-weight:600;
 color:var(--primary);
 }
 
-.card{
+.pet-card{
 backdrop-filter:blur(10px);
 border:1px solid rgba(255,255,255,.15);
 }
@@ -191,15 +186,22 @@ max-width:100%;
 
 /* SERVICES */
 
+.services{
+background:var(--light);
+}
+
 .service-box{
 padding:40px 25px;
 text-align:center;
 }
 
+.service-box{
+min-height:320px;
+}
+
 .service-box i{
 font-size:3.5rem;
 margin-bottom:20px;
-min-height:320px;
 background:var(--gradient);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -425,11 +427,6 @@ html{
 scroll-behavior:smooth;
 }
 
-body.dark-mode{
-background:#0F172A;
-color:#fff;
-}
-
 body.dark-mode .navbar{
 background:#020617;
 }
@@ -461,11 +458,6 @@ form textarea,
 form select{
 border-radius:12px !important;
 padding:12px;
-}
-
-.btn{
-border-radius:50px;
-font-weight:600;
 }
 
 ::-webkit-scrollbar{
@@ -560,6 +552,7 @@ color:#FFFFFF;
 
 /* SEÇÕES */
 
+body.dark-mode .services,
 body.dark-mode .gallery,
 body.dark-mode .pets,
 body.dark-mode .container,
@@ -600,6 +593,10 @@ border:1px solid rgba(255,255,255,.08);
 }
 
 /* FAQ */
+
+body.dark-mode .accordion-button::after{
+filter:brightness(0) invert(1);
+}
 
 body.dark-mode .accordion-button{
 background:#1E293B;
