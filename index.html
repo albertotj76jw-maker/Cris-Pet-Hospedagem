@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -80,13 +80,13 @@
                         </li>
 
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-primary" href="#sos">Publicar SOS</a>
+                            <a class="btn btn-outline-light btn-lg" href="#sos">Publicar SOS</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
+
     </header>
 
     <!-- HERO -->
@@ -108,11 +108,11 @@
 
                     <div class="buttons d-flex gap-3 flex-wrap">
 
-                        <a href="#pets" class="btn btn-primary btn-lg">
+                        <a href="#pets" class="btn btn-outline-light btn-lg">
                             Encontrar Meu Pet
                         </a>
 
-                        <a href="servicos.html" class="btn btn-primary btn-lg">
+                        <a href="servicos.html" class="btn btn-outline-light btn-lg">
                             Conhecer Serviços
                         </a>
 
@@ -128,96 +128,560 @@
         </div>
 
     </section>
-   
-        <!-- PETS -->
+
+    <!-- ========================= -->
+    <!-- PETS DESAPARECIDOS -->
+    <!-- ========================= -->
 
     <section class="pets py-5" id="pets">
 
         <div class="container">
-            <h2 class="section-title text-center">
-                Pets Desaparecidos
-            </h2>
 
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card pet-card">
+            <div class="text-center mb-5" data-aos="fade-up">
 
-                        <img src="img/pet1.jpg">
+                <span class="badge bg-primary px-4 py-2 fs-6 rounded-pill">
+                    SOS PET
+                </span>
 
-                        <div class="card-body">
+                <h2 class="section-title mt-3">
+                    Pets Desaparecidos
+                </h2>
 
-                            <h5>Luna</h5>
+                <p class="section-subtitle">
+                    Ajude a encontrar animais desaparecidos 🐾
+                </p>
 
-                            <p>
-                                Golden Retriever desaparecida em São José dos Campos.
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- LUNA -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card pet-card h-100 border-0 shadow-lg" data-aos="zoom-in">
+
+                        <div class="pet-image">
+
+                            <img src="img/pet1.jpg" class="card-img-top" alt="Luna">
+
+                            <span class="pet-status">
+                                Desaparecida
+                            </span>
+
+                        </div>
+
+                        <div class="card-body text-center">
+
+                            <h4 class="fw-bold">
+                                Luna
+                            </h4>
+
+                            <p class="pet-info">
+                                Golden Retriever desaparecida.
                             </p>
 
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#petModal">
+                            <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#lunaModal">
+
+                                <i class="bi bi-search-heart"></i>
                                 Ver Detalhes
+
                             </button>
 
                         </div>
                     </div>
                 </div>
+
+                <!-- THOR -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card pet-card h-100 border-0 shadow-lg" data-aos="zoom-in">
+
+                        <div class="pet-image">
+
+                            <img src="img/pet2.jpg" class="card-img-top" alt="Thor">
+
+                            <span class="pet-status urgent">
+                                Urgente
+                            </span>
+
+                        </div>
+
+                        <div class="card-body text-center">
+
+                            <h4 class="fw-bold">
+                                Thor
+                            </h4>
+
+                            <p class="pet-info">
+                                Pastor Alemão • Precisa de medicação.
+                            </p>
+
+                            <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#thorModal">
+
+                                <i class="bi bi-search-heart"></i>
+                                Ver Detalhes
+
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEL -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card pet-card h-100 border-0 shadow-lg" data-aos="zoom-in">
+
+                        <div class="pet-image">
+
+                            <img src="img/pet3.jpg" class="card-img-top" alt="Mel">
+
+                            <span class="pet-status">
+                                Procurando
+                            </span>
+
+                        </div>
+
+                        <div class="card-body text-center">
+
+                            <h4 class="fw-bold">
+                                Mel
+                            </h4>
+
+                            <p class="pet-info">
+                                SRD desaparecida próximo ao centro.
+                            </p>
+
+                            <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#melModal">
+
+                                <i class="bi bi-search-heart"></i>
+                                Ver Detalhes
+
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
 
     </section>
 
-     <!-- GALERIA -->
+    <!-- ========================= -->
+    <!-- DETALHES DOS PETS -->
+    
+    <!-- MODAL LUNA -->
+    <!-- ========================= -->
 
-    <section class="gallery py-5">
+    <div class="modal fade" id="lunaModal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content pet-modal">
+
+                <div class="modal-header border-0">
+
+                    <h3 class="fw-bold text-primary">
+                        Luna 🐾
+                    </h3>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row g-4 align-items-center">
+
+                        <div class="col-lg-6">
+
+                            <img src="img/pet1.jpg" class="img-fluid rounded-4 shadow">
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <h4 class="fw-bold">
+                                Golden Retriever
+                            </h4>
+
+                            <p class="mt-3">
+
+                                Luna desapareceu próximo ao
+                                Jardim Satélite em São José dos Campos.
+
+                            </p>
+
+                            <ul class="pet-details">
+
+                                <li>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    Última localização: Jardim Satélite
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-calendar-event-fill"></i>
+                                    Desaparecida há 3 dias
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-palette-fill"></i>
+                                    Cor: Dourada
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-heart-pulse-fill"></i>
+                                    Muito dócil e amigável
+                                </li>
+
+                            </ul>
+
+
+                            <a href="https://wa.me/5512988802915" target="_blank" class="btn btn-success btn-lg mt-4">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Informar Paradeiro
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- MODAL THOR -->
+    <!-- ========================= -->
+
+    <div class="modal fade" id="thorModal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content pet-modal">
+
+                <div class="modal-header border-0">
+
+                    <h3 class="fw-bold text-danger">
+                        Thor 🐾
+                    </h3>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row g-4 align-items-center">
+
+                        <div class="col-lg-6">
+
+                            <img src="img/pet2.jpg" class="img-fluid rounded-4 shadow">
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <h4 class="fw-bold">
+                                Pastor Alemão
+                            </h4>
+
+                            <p class="mt-3">
+
+                                Thor desapareceu na região do Urbanova
+                                e necessita de medicação diária.
+
+                            </p>
+
+                            <ul class="pet-details">
+
+                                <li>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    Última localização: Urbanova
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-calendar-event-fill"></i>
+                                    Desaparecido há 1 dia
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-palette-fill"></i>
+                                    Cor: Preto e Caramelo
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-heart-pulse-fill"></i>
+                                    Precisa de cuidados especiais
+                                </li>
+
+                            </ul>
+
+                            <a href="https://wa.me/5512988802915" target="_blank" class="btn btn-success btn-lg mt-4">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Informar Paradeiro
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- MODAL MEL -->
+    <!-- ========================= -->
+
+    <div class="modal fade" id="melModal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content pet-modal">
+
+                <div class="modal-header border-0">
+
+                    <h3 class="fw-bold text-warning">
+                        Mel 🐾
+                    </h3>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row g-4 align-items-center">
+
+                        <div class="col-lg-6">
+
+                            <img src="img/pet3.jpg" class="img-fluid rounded-4 shadow">
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <h4 class="fw-bold">
+                                SRD
+                            </h4>
+
+                            <p class="mt-3">
+
+                                Mel desapareceu próximo ao centro
+                                de São José dos Campos.
+
+                            </p>
+
+                            <ul class="pet-details">
+
+                                <li>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    Última localização: Centro
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-calendar-event-fill"></i>
+                                    Desaparecida há 5 dias
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-palette-fill"></i>
+                                    Cor: Bege Clara
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-heart-pulse-fill"></i>
+                                    Assustada com barulhos
+                                </li>
+
+                            </ul>
+
+                            <a href="https://wa.me/5512988802915" target="_blank" class="btn btn-success btn-lg mt-4">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Informar Paradeiro
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- GALERIA -->
+    <!-- ========================= -->
+
+    <section class="gallery py-5" id="galeria">
 
         <div class="container">
 
-            <h2 class="section-title text-center">
-                Nossa Galeria
-            </h2>
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="badge bg-primary px-4 py-2 fs-6 rounded-pill">
+                    MOMENTOS
+                </span>
+
+                <h2 class="section-title mt-3">
+                    Nossa Galeria
+                </h2>
+
+                <p class="section-subtitle">
+                    Amor, cuidado e segurança para cada pet ❤️
+                </p>
+
+            </div>
 
             <div class="row g-4">
 
                 <div class="col-md-4">
-                    <img src="./img/gallery1.jpg" class="gallery-img" alt="Pet 1">
+
+                    <div class="gallery-box">
+
+                        <img src="./img/gallery1.jpg" class="gallery-img" alt="Pet 1">
+
+                        <div class="gallery-overlay">
+
+                            <h5>
+                                Hospedagem Premium
+                            </h5>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div class="col-md-4">
-                    <img src="./img/gallery2.jpg" class="gallery-img" alt="Pet 2">
+
+                    <div class="gallery-box">
+
+                        <img src="./img/gallery2.jpg" class="gallery-img" alt="Pet 2">
+
+                        <div class="gallery-overlay">
+
+                            <h5>
+                                Banho & Tosa
+                            </h5>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div class="col-md-4">
-                    <img src="./img/gallery3.jpg" class="gallery-img" alt="Pet 3">
+
+                    <div class="gallery-box">
+
+                        <img src="./img/gallery3.jpg" class="gallery-img" alt="Pet 3">
+
+                        <div class="gallery-overlay">
+
+                            <h5>
+                                Pets Felizes
+                            </h5>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
+
         </div>
 
     </section>
 
-     <!-- SOS -->
+    <!-- ========================= -->
+    <!-- SOS SECTION -->
+    <!-- ========================= -->
 
-    <section class="sos-section" id="sos">
+    <section class="sos-section py-5" id="sos">
 
         <div class="container">
-            <div class="row align-items-center">
 
-                <div class="col-lg-6">
-                    <img src="img/pet3.jpg" class="img-fluid rounded">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6" data-aos="fade-right">
+
+                    <div class="sos-image-box">
+
+                        <img src="img/pet1.jpg" class="img-fluid rounded-4 shadow-lg">
+
+                    </div>
+
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left">
 
-                    <h2>SOS Pet Perdido</h2>
+                    <span class="badge bg-danger px-4 py-2 fs-6 rounded-pill">
+                        ALERTA SOS
+                    </span>
 
-                    <p>
-                        Publique rapidamente informações sobre animais desaparecidos.
+                    <h2 class="mt-4 fw-bold display-5">
+                        SOS Pet Perdido
+                    </h2>
+
+                    <p class="lead mt-4">
+
+                        Publique rapidamente informações
+                        sobre animais desaparecidos e compartilhe
+                        com milhares de pessoas.
+
                     </p>
 
-                    <a href="contato.html" class="class="btn btn-primary btn-lg mt-3>
-                        Publicar Agora
-                    </a>
+                    <div class="d-flex gap-3 flex-wrap mt-4">
+
+                        <a href="contato.html" class="btn btn-outline-light btn-lg">
+
+                            <i class="bi bi-megaphone-fill"></i>
+                            Publicar Agora
+
+                        </a>
+
+                        <a href="#pets" class="btn btn-outline-light btn-lg">
+
+                            <i class="bi bi-search"></i>
+                            Procurar Pets
+
+                        </a>
+
+                    </div>
 
                 </div>
+
             </div>
+
         </div>
 
     </section>
@@ -259,263 +723,257 @@
         </div>
 
     </section>
-   
+
     <!-- DIFERENCIAIS -->
 
-<section class="container py-5">
-
-    <h2 class="section-title text-center">
-        Por Que Escolher a CrisPetHospedagemConnect?
-    </h2>
-
-    <div class="row g-4">
-        <div class="col-lg-4">
-
-            <div class="service-box h-100 text-center">
-                <i class="bi bi-shield-check"></i>
-
-                <h4>Segurança Total</h4>
-
-                <p>
-                    Ambiente monitorado 24 horas
-                    com acompanhamento completo.
-                </p>
-
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-
-            <div class="service-box h-100 text-center">
-                <i class="bi bi-heart-pulse"></i>
-
-                <h4>Cuidado Especializado</h4>
-
-                <p>
-                    Equipe treinada para atender
-                    cada pet com carinho.
-                </p>
-
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-
-            <div class="service-box h-100 text-center">
-                <i class="bi bi-whatsapp"></i>
-
-                <h4>Suporte Imediato</h4>
-
-                <p>
-                    Atendimento rápido via WhatsApp
-                    e sistema SOS inteligente.
-                </p>
-
-            </div>
-        </div>
-    </div>
-
-</section>
-
-    <!-- DEPOIMENTOS -->
-
-<section class="py-5 bg-light">
-
-    <div class="container">
+    <section class="container py-5">
 
         <h2 class="section-title text-center">
-            O Que Nossos Clientes Dizem
+            Por Que Escolher a CrisPetHospedagemConnect?
         </h2>
 
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-lg-4">
 
-                <div class="card pet-card h-100">
-                    <div class="card-body">
+                <div class="service-box h-100 text-center">
+                    <i class="bi bi-shield-check"></i>
 
-                        <h5>Mariana Silva</h5>
+                    <h4>Segurança Total</h4>
 
-                        <p>
-                            “Atendimento maravilhoso.
-                            Encontraram meu pet em poucas horas.”
-                        </p>
+                    <p>
+                        Ambiente monitorado 24 horas
+                        com acompanhamento completo.
+                    </p>
 
-                        <div class="text-warning">
-                            ★★★★★
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="service-box h-100 text-center">
+                    <i class="bi bi-heart-pulse"></i>
+
+                    <h4>Cuidado Especializado</h4>
+
+                    <p>
+                        Equipe treinada para atender
+                        cada pet com carinho.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="service-box h-100 text-center">
+                    <i class="bi bi-whatsapp"></i>
+
+                    <h4>Suporte Imediato</h4>
+
+                    <p>
+                        Atendimento rápido via WhatsApp
+                        e sistema SOS inteligente.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- DEPOIMENTOS -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <h2 class="section-title text-center">
+                O Que Nossos Clientes Dizem
+            </h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+
+                    <div class="card pet-card h-100">
+                        <div class="card-body">
+
+                            <h5>Mariana Silva</h5>
+
+                            <p>
+                                “Atendimento maravilhoso.
+                                Encontraram meu pet em poucas horas.”
+                            </p>
+
+                            <div class="text-warning">
+                                ★★★★★
+                            </div>
+
                         </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card pet-card h-100">
+                        <div class="card-body">
+
+                            <h5>Carlos Henrique</h5>
+
+                            <p>
+                                “Hotel extremamente seguro
+                                e equipe muito cuidadosa.”
+                            </p>
+
+                            <div class="text-warning">
+                                ★★★★★
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card pet-card h-100">
+                        <div class="card-body">
+
+                            <h5>Amanda Oliveira</h5>
+
+                            <p>
+                                “O melhor sistema SOS Pet
+                                que já utilizei.”
+                            </p>
+
+                            <div class="text-warning">
+                                ★★★★★
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ESTATÍSTICAS -->
+
+    <section class="stats py-5">
+
+        <h2 class="section-title text-center">
+            Estatísticas
+        </h2>
+
+        <div class="container">
+
+            <div class="row g-4 text-center">
+
+                <div class="col-md-3">
+                    <div class="stat-box">
+
+                        <i class="bi bi-heart-fill display-4"></i>
+                        <h2>+850</h2>
+                        <p>Pets Encontrados</p>
 
                     </div>
                 </div>
 
-            </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
 
-            <div class="col-md-4">
-
-                <div class="card pet-card h-100">
-                    <div class="card-body">
-
-                        <h5>Carlos Henrique</h5>
-
-                        <p>
-                            “Hotel extremamente seguro
-                            e equipe muito cuidadosa.”
-                        </p>
-
-                        <div class="text-warning">
-                            ★★★★★
-                        </div>
+                        <i class="bi bi-house-heart-fill display-4"></i>
+                        <h2>+1200</h2>
+                        <p>Hospedagens Realizadas</p>
 
                     </div>
                 </div>
 
-            </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
 
-            <div class="col-md-4">
+                        <i class="bi bi-scissors display-4"></i>
+                        <h2>+5 Mil</h2>
+                        <p>Banhos e Tosas</p>
 
-                <div class="card pet-card h-100">
-                    <div class="card-body">
+                    </div>
+                </div>
 
-                        <h5>Amanda Oliveira</h5>
+                <div class="col-md-3">
+                    <div class="stat-box">
 
-                        <p>
-                            “O melhor sistema SOS Pet
-                            que já utilizei.”
-                        </p>
-
-                        <div class="text-warning">
-                            ★★★★★
-                        </div>
+                        <i class="bi bi-star-fill display-4"></i>
+                        <h2>4.9★</h2>
+                        <p>Avaliação dos Clientes</p>
 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</section>
-
- <!-- ESTATÍSTICAS -->
-
-<section class="stats py-5">
-
-    <h2 class="section-title text-center">
-        Estatísticas
-    </h2>
-
-    <div class="container">
-
-        <div class="row g-4 text-center">
-
-            <div class="col-md-3">
-                <div class="stat-box">
-
-                    <i class="bi bi-heart-fill display-4"></i>
-                    <h2>+850</h2>
-                    <p>Pets Encontrados</p>
-
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="stat-box">
-
-                    <i class="bi bi-house-heart-fill display-4"></i>
-                    <h2>+1200</h2>
-                    <p>Hospedagens Realizadas</p>
-
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="stat-box">
-
-                    <i class="bi bi-scissors display-4"></i>
-                    <h2>+5 Mil</h2>
-                    <p>Banhos e Tosas</p>
-
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="stat-box">
-
-                    <i class="bi bi-star-fill display-4"></i>
-                    <h2>4.9★</h2>
-                    <p>Avaliação dos Clientes</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
+    </section>
 
     <!-- FAQ -->
 
-<section class="container py-5">
+    <section class="container py-5">
 
-    <h2 class="section-title text-center">
+        <h2 class="section-title text-center">
 
-        Perguntas Frequentes
+            Perguntas Frequentes
 
-    </h2>
+        </h2>
 
-    <div class="accordion" id="faqAccordion">
+        <div class="accordion" id="faqAccordion">
 
-        <div class="accordion-item">
+            <div class="accordion-item">
 
-            <h2 class="accordion-header">
+                <h2 class="accordion-header">
 
-                <button class="accordion-button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq1">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
 
-                    O hotel funciona 24 horas?
+                        O hotel funciona 24 horas?
 
-                </button>
+                    </button>
 
-            </h2>
+                </h2>
 
-            <div id="faq1"
-                class="accordion-collapse collapse show">
+                <div id="faq1" class="accordion-collapse collapse show">
 
-                <div class="accordion-body">
+                    <div class="accordion-body">
 
-                    Sim. Temos suporte completo
-                    e monitoramento 24h.
+                        Sim. Temos suporte completo
+                        e monitoramento 24h.
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+
+                        Como funciona o SOS Pet?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq2" class="accordion-collapse collapse">
+
+                    <div class="accordion-body">
+                        Você publica as informações
+                        do pet desaparecido e o sistema
+                        ajuda na divulgação.
+                    </div>
 
                 </div>
             </div>
         </div>
 
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button class="accordion-button collapsed"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq2">
-
-                    Como funciona o SOS Pet?
-
-                </button>
-
-            </h2>
-
-            <div id="faq2"
-                class="accordion-collapse collapse">
-
-                <div class="accordion-body">
-                    Você publica as informações
-                    do pet desaparecido e o sistema
-                    ajuda na divulgação.
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</section>
+    </section>
 
     <!-- CTA -->
 
@@ -531,7 +989,7 @@
                 Agende agora mesmo um atendimento.
             </p>
 
-            <a href="contato.html" class="btn btn-primary btn-lg mt-3">
+            <a href="contato.html" class="btn btn-outline-light btn-lg">
                 Entrar em Contato
             </a>
 
@@ -620,39 +1078,6 @@
         <i class="bi bi-arrow-up"></i>
 
     </button>
-
-    <!-- MODAL -->
-
-    <div class="modal fade" id="petModal" tabindex="-1">
-
-        <div class="modal-dialog modal-dialog-centered">
-
-            <div class="modal-content rounded-4">
-
-                <div class="modal-header">
-
-                    <h5 class="modal-title">
-                        Detalhes do Pet
-                    </h5>
-
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
-
-                </div>
-
-                <div class="modal-body">
-
-                    <img src="img/pet1.jpg" class="img-fluid rounded mb-3">
-
-                    <h4>Luna</h4>
-
-                    <p>
-                        Golden Retriever desaparecida em São José dos Campos.
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- TOAST -->
 
