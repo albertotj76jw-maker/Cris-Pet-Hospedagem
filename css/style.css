@@ -764,7 +764,9 @@ color:#fff;
 
 body.dark-mode .service-box:hover,
 body.dark-mode .pet-card:hover,
-body.dark-mode .card:hover{
+body.dark-mode .card:hover,
+body.dark-mode .contato-box:hover,
+body.dark-mode .login:hover,{
 box-shadow:0 20px 40px rgba(236,72,153,.25);
 }
 
