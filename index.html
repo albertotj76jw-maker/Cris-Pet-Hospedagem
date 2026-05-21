@@ -40,19 +40,14 @@
     <!-- NAVBAR -->
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+       <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
             <div class="container">
 
                 <a class="navbar-brand fw-bold" href="index.html">
                     <i class="bi bi-heart-pulse-fill">
                     </i>CrisPetHospedagemConnect</a>
-
-                <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3 me-2">
-                    <i class="bi bi-moon-stars-fill"></i>
-                </button>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" >
-                    <span class="navbar-toggler-icon"></span>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu">
                 </button>
 
                 <div class="collapse navbar-collapse" id="menu">
@@ -90,7 +85,7 @@
 
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0" data-aos="fade-right">
 
                     <h1>
                         Seu pet nunca mais ficará sozinho 🐾
@@ -101,7 +96,7 @@
                         banho, tosa, hospedagem e monitoramento.
                     </p>
 
-                   <div class="buttons d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start">
+                   <div class="buttons d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
                         <a href="#pets" class="btn btn-outline-light btn-lg">
                             Encontrar Meu Pet
                         </a>
@@ -145,10 +140,10 @@
 
                 <!-- LUNA -->
                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card pet-card h-100 border-0 shadow-lg" data-aos="zoom-in">
+                    <div class="card pet-card h-100 border-0 shadow-lg overflow-hidden" data-aos="zoom-in-up">
                         <div class="pet-image">
 
-                            <img src="img/pet1.jpg" class="img-fluid rounded-4 shadow" alt="Luna">
+                            <img src="img/pet1.jpg" class="card-img-top" alt="Luna" loading="lazy">
                             <span class="pet-status">Desaparecida</span>
 
                         </div>
@@ -169,10 +164,10 @@
 
                 <!-- THOR -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card pet-card h-100 border-0 shadow-lg" data-aos="zoom-in">
+                   <div class="card pet-card h-100 border-0 shadow-lg overflow-hidden" data-aos="zoom-in-up">
                         <div class="pet-image">
 
-                            <img src="img/pet2.jpg" class="img-fluid rounded-4 shadow" alt="Thor">
+                            <img src="img/pet2.jpg" class="card-img-top" alt="Thor" loading="lazy">
                             <span class="pet-status urgent">Urgente</span>
 
                         </div>
@@ -193,10 +188,10 @@
 
                 <!-- MEL -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card pet-card h-100 border-0 shadow-lg" data-aos="zoom-in">
+                    <div class="card pet-card h-100 border-0 shadow-lg overflow-hidden" data-aos="zoom-in-up">
                         <div class="pet-image">
 
-                            <img src="img/pet3.jpg" class="img-fluid rounded-4 shadow" alt="Mel">
+                            <img src="img/pet3.jpg" class="card-img-top" alt="Mel" loading="lazy">
                             <span class="pet-status">Procurando</span>
 
                         </div>
@@ -236,11 +231,11 @@
                 <div class="modal-body">
                     <div class="row g-4 align-items-center">
 
-                       <div class="col-12 col-lg-6 text-center">
+                       <div class="col-12 col-lg-6 text-center mb-4 mb-lg-0">
                             <img src="img/pet1.jpg" class="img-fluid rounded-4 shadow">
                         </div>
 
-                       <div class="col-12 col-lg-6 text-center">
+                      <div class="col-12 col-lg-6 text-center mb-4 mb-lg-0">
 
                             <h4 class="fw-bold">Golden Retriever</h4>
 
@@ -301,11 +296,11 @@
                 <div class="modal-body">
                     <div class="row g-4 align-items-center">
 
-                        <div class="col-12 col-lg-6 text-center">
+                       <div class="col-12 col-lg-6 text-center mb-4 mb-lg-0">
                             <img src="img/pet2.jpg" class="img-fluid rounded-4 shadow">
                         </div>
 
-                       <div class="col-12 col-lg-6 text-center">
+                       <div class="col-12 col-lg-6 text-center mb-4 mb-lg-0">
                             <h4 class="fw-bold">Pastor Alemão</h4>
 
                             <p class="mt-3">
@@ -363,9 +358,9 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-6 text-center mb-4 mb-lg-0">
 
-                        <div class="col-12 col-lg-6 text-center">
+                        <div class="col-12 col-lg-6 text-center mb-4 mb-lg-0">
                             <img src="img/pet3.jpg" class="img-fluid rounded-4 shadow">
                         </div>
 
@@ -430,7 +425,7 @@
             <div class="row g-4">
 
                 <div class="col-12 col-md-4">
-                    <div class="gallery-box">
+                    <div class="gallery-box overflow-hidden rounded-4 shadow-sm">
                         <img src="./img/gallery1.jpg" class="gallery-img" alt="Pet 1">
 
                         <div class="gallery-overlay">
@@ -440,7 +435,7 @@
                 </div>
 
                 <div class="col-12 col-md-4">
-                    <div class="gallery-box">
+                    <div class="gallery-box overflow-hidden rounded-4 shadow-sm">
                         <img src="./img/gallery2.jpg" class="gallery-img" alt="Pet 2">
 
                         <div class="gallery-overlay">
@@ -450,7 +445,7 @@
                 </div>
 
                 <div class="col-12 col-md-4">
-                    <div class="gallery-box">
+                    <div class="gallery-box overflow-hidden rounded-4 shadow-sm">
                         <img src="./img/gallery3.jpg" class="gallery-img" alt="Pet 3">
 
                         <div class="gallery-overlay">
@@ -471,7 +466,7 @@
                 <div class="col-lg-6" data-aos="fade-right">
 
                     <div class="sos-image-box">
-                        <img src="img/pet1.jpg" class="img-fluid rounded-4 shadow-lg">
+                        <img src="img/pet1.jpg" class="img-fluid rounded-4 shadow-lg sos-img" alt="Pet desaparecido" loading="lazy">
                     </div>
 
                 </div>
@@ -734,8 +729,7 @@
         });
 
     </script>
-
-    <script src="js/darkmode.js"></script>
+    
     <script src="js/viacep.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/toast.js"></script>
