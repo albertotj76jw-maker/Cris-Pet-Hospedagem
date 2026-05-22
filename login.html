@@ -6,16 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contatoss | CrisPetHospedagemConnect</title>
+    <title>Login | CrisPetHospedagemConnect</title>
 
     <!-- SEO -->
-    <meta name="description" content="Serviços premium para pets em São José dos Campos">
+    <meta name="description"
+        content="Área de login da CrisPetHospedagemConnect">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,47 +42,64 @@
 
             <div class="container">
 
-                <a class="navbar-brand fw-bold" href="index.html">
+                <a class="navbar-brand fw-bold"
+                    href="index.html">
 
                     <i class="bi bi-heart-pulse-fill"></i>
                     CrisPetHospedagemConnect
 
                 </a>
 
-                <button id="darkModeBtn" class="btn btn-outline-light ms-3">
-
-                    <i class="bi bi-moon-stars-fill"></i>
-
-                </button>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
 
                     <span class="navbar-toggler-icon"></span>
 
                 </button>
 
-                <div class="collapse navbar-collapse" id="menu">
+                <div class="collapse navbar-collapse"
+                    id="menu">
 
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <ul class="navbar-nav ms-auto align-items-lg-center text-center">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link"
+                                href="index.html">
+                                Home
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="servicos.html">Serviços</a>
+                            <a class="nav-link"
+                                href="servicos.html">
+                                Serviços
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="contato.html">Contato</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="publicar.html">Publicar SOS</a>
+                            <a class="nav-link"
+                                href="contato.html">
+                                Contato
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link"
+                                href="publicar.html">
+                                Publicar SOS
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                href="login.html">
+                                Login
+                            </a>
                         </li>
 
                     </ul>
@@ -92,52 +111,235 @@
 
     </header>
 
-    <main class="container py-5 mt-5">
-        <div class="bg-light">
-            <div class="row justify-content-center">
-                <div class="col-md-5">
-                    <div class="card shadow-lg border-0 rounded-4 p-5">
+    <!-- LOGIN -->
+    <main class="py-5 min-vh-100 d-flex align-items-center">
 
-                        <h2 class="text-center mb-4">
-                            Login Usuário
-                        </h2>
+        <div class="container">
 
-                        <div>
-                            <button id="darkModeBtn" class="btn btn-outline-light ms-3">
-                                <i class="bi bi-moon-stars-fill"></i>
-                            </button>
+            <div class="row align-items-center justify-content-center g-5">
+
+                <!-- TEXTO -->
+                <div class="col-12 col-lg-6 text-center text-lg-start"
+                    data-aos="fade-right">
+
+                    <span class="badge bg-primary px-4 py-2 rounded-pill fs-6 mb-3">
+                        ÁREA DO CLIENTE
+                    </span>
+
+                    <h1 class="fw-bold display-5">
+
+                        Bem-vindo à CrisPet
+                        HospedagemConnect 🐾
+
+                    </h1>
+
+                    <p class="lead mt-4">
+
+                        Acesse sua conta para acompanhar hospedagens,
+                        informações do seu pet e publicações SOS.
+
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start mt-4">
+
+                        <a href="publicar.html"
+                            class="btn btn-primary btn-lg">
+
+                            <i class="bi bi-megaphone-fill"></i>
+                            Publicar SOS
+
+                        </a>
+
+                        <a href="contato.html"
+                            class="btn btn-outline-primary btn-lg">
+
+                            <i class="bi bi-whatsapp"></i>
+                            Falar no WhatsApp
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- FORM LOGIN -->
+                <div class="col-12 col-md-10 col-lg-5"
+                    data-aos="fade-left">
+
+                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
+
+                        <div class="text-center mb-4">
+
+                            <div class="mb-3">
+
+                                <i class="bi bi-person-circle display-1 text-primary"></i>
+
+                            </div>
+
+                            <h2 class="fw-bold">
+                                Login Usuário
+                            </h2>
+
+                            <p class="text-muted">
+                                Entre com seu e-mail e senha
+                            </p>
+
                         </div>
 
-                        <form action="php/login.php" method="POST">
+                        <form action="php/login.php"
+                            method="POST">
 
-                            <div class="mb-3">
+                            <div class="mb-4">
 
-                                <label>Email</label>
+                                <label class="form-label fw-semibold">
+                                    E-mail
+                                </label>
 
-                                <input type="email" name="email" class="form-control" required>
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </span>
+
+                                    <input type="email"
+                                        name="email"
+                                        class="form-control form-control-lg"
+                                        placeholder="Digite seu e-mail"
+                                        required>
+
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label fw-semibold">
+                                    Senha
+                                </label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-lock-fill"></i>
+                                    </span>
+
+                                    <input type="password"
+                                        name="senha"
+                                        class="form-control form-control-lg"
+                                        placeholder="Digite sua senha"
+                                        required>
+
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input"
+                                        type="checkbox"
+                                        id="lembrar">
+
+                                    <label class="form-check-label"
+                                        for="lembrar">
+                                        Lembrar login
+                                    </label>
+
+                                </div>
+
+                                <a href="#"
+                                    class="text-decoration-none">
+                                    Esqueceu a senha?
+                                </a>
 
                             </div>
 
-                            <div class="mb-3">
+                            <button class="btn btn-primary btn-lg w-100 py-3">
 
-                                <label>Senha</label>
-
-                                <input type="password" name="senha" class="form-control" required>
-
-                            </div>
-
-                            <button class="btn btn-primary btn-lg w-100">
+                                <i class="bi bi-box-arrow-in-right"></i>
                                 Entrar
+
                             </button>
 
                         </form>
 
+                        <div class="text-center mt-4">
+
+                            <p class="mb-0">
+
+                                Ainda não possui conta?
+
+                                <a href="contato.html"
+                                    class="text-decoration-none fw-semibold">
+
+                                    Entre em contato
+
+                                </a>
+
+                            </p>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
     </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+
+        <div class="container">
+
+            <hr>
+
+            <p class="text-center mb-0">
+
+                © 2026 CrisPetHospedagemConnect
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/5512988802915"
+        target="_blank"
+        class="whatsapp-float">
+
+        <i class="bi bi-whatsapp"></i>
+
+    </a>
+
+    <!-- BOTÃO TOPO -->
+    <button id="topBtn">
+
+        <i class="bi bi-arrow-up"></i>
+
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script>
+
+        AOS.init({
+
+            duration: 1200,
+            once: true
+
+        });
+
+    </script>
+
+    <!-- BOTÃO “VOLTAR AO TOPO” -->
+    <button id="topBtn">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
 </body>
 
