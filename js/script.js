@@ -132,3 +132,25 @@ alert("Erro ao buscar CEP");
 });
 
 }
+
+// BOTÃO PET ENCONTRADO
+
+document.querySelectorAll(".btn-outline-primary, .btn-outline-danger, .btn-outline-warning")
+.forEach(botao => {
+
+    botao.addEventListener("click", function(){
+
+        this.innerHTML =
+        "✅ Pet Encontrado";
+
+        this.classList.remove(
+            "btn-outline-primary",
+            "btn-outline-danger",
+            "btn-outline-warning"
+        );
+
+        this.classList.add("btn-success");
+
+    });
+
+});
